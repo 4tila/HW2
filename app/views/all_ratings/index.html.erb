@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>All Ratings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @all_ratings.each do |all_rating| %>
+      <tr>
+        <td><%= link_to 'Show', all_rating %></td>
+        <td><%= link_to 'Edit', edit_all_rating_path(all_rating) %></td>
+        <td><%= link_to 'Destroy', all_rating, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New All Rating', new_all_rating_path %>
